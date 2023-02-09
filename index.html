@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EXPOFERIA PROYECTO</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Logins.css">
+        <link rel="stylesheet" href="css/RegistroSesion.css">
+    </head>
+    <body>
+        <header class="header_enfocado hero" id="header_enfocado">
+            <div class="container">
+                <div class="menu">
+                    <nav>
+                        <ul class="lista">
+                            <li>
+                                <a href="#">Iniciar Sesion</a> 
+                                <div class="sesiones">
+                                    <a href="#" id="btnLogC" onclick="AbrirCliente();">Cliente</a>
+                                    <a href="#" id="btnLogA" onclick="AbrirAbogado();">Abogado</a>
+                                </div>
+                            </li>
+                            <li> 
+                                <a href="#asesorcorp" >Asesorcorp</a>
+                            </li>
+                            <li> 
+                                <a href="contactanos.html">Contactanos</a>
+                            </li>
+                            <li>
+                                <a href="#nosotros">Nosotros</a>
+                            </li>
+                            <li> 
+                                <a href="#nuestro_equipo">Nuestro Equipo</a>
+                            </li>
+                            <li> 
+                                <a href="#comentarios">Reseñas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <section class="hero__container">
+                    <div class="hero__texts">
+                        <h1 class="hero__title">
+                            Asesorcorp
+                        </h1>
+                        <h2h class="hero__subtitle">La mejor opción de consultoria online</h2>
+                            <a href="#" class="hero__cta" id="Unete" onclick="VisibleRegGene();">Unete ahora</a>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="hero__wave" style="overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 351.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+        </header>
+
+
+    <!--Para los login-->
+        <!--Login cliente-->
+        <div id="ventanaLoginC">
+            <div id="cerrarLogin">
+                <a href="#" id="CerrarLoginC" onclick="cerrarVentanaC();">
+                    <img src="iconos/cerrar.png" title="Cerrar" />
+                </a>
+            </div>
+            <h1>LOGIN CLIENTE</h1>
+            <form id="LogClient">
+                <div class="contenedor_login" id="contenedor_loginC">
+                    <input type="text" id="UsuarioCliente" placeholder="Ingrese su Usuario" />
+                    <input type="password" id="ContraCliente" placeholder="Ingrese su Contraseña" />
+                    <a href="#" class="BtnIngresar" id="IngresarC" onclick="IngresarCliente();">Ingresar</a>
+                    <a href="#" class="BtnOlvido" id="OlvidoC">¿Olvidó su contraseña?</a>
+                    <a href="#" class="BtnRegistrar" id="RegistrarC" onclick="AbrirRegCliente();">REGISTRARSE</a>
+                </div> 
+            </form>
+        </div>
+        
+        <!--Login abogado-->
+        <div id="ventanaLoginA">
+            <div id="cerrarLogin">
+                <a href="#" id="CerrarLoginA" onclick="cerrarVentanaA();">
+                    <img src="iconos/cerrar.png" title="Cerrar" />
+                </a>
+            </div>
+            <h1>LOGIN ABOGADO</h1>
+            <form id="LogAbog">
+                <div class="contenedor_login" id="contenedor_loginA">
+                    <input type="text" id="UsuarioAbogado" placeholder="Ingrese su Usuario" />
+                    <input type="password" id="ContraAbogado" placeholder="Ingrese su Contraseña" />
+                    <a href="#" class="BtnIngresar" id="IngresarA" onclick="IngresarAbogado();">Ingresar</a>
+                    <a href="#" class="BtnOlvido" id="OlvidoA">¿Olvidó su contraseña?</a>
+                    <a href="#" class="BtnRegistrar" id="RegistrarA" onclick="AbrirRegAbogado();">REGISTRARSE</a>
+                </div>
+            </form>
+        </div>
+
+        <!--Para la ventana de registro principal-->
+        <div id="registro">
+            <div id="contenedorRegistro">
+                <h1>Registros</h1>
+                <h2>¿Cómo quieres registrarte?</h2>
+                <div class="boton_cliente">
+                    <a href="#" onclick="VisibleRegClient();">Como cliente</a>
+                </div>
+                <div class="boton_abogado">
+                    <a href="#" onclick="VisibleRegAboga();">Como abogado</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Para el registro del Cliente-->
+        <div id="registro">
+            <form id="TodoRegistroC">
+                <div id="contendorRegistro_Cliente">
+                    <div class="titulo_registro">
+                        <h1>Cuenta Asesorcorp-Cliente</h1>
+                    </div>
+                    <section id="Seccion1">
+                        <h3>¿Quién eres?</h3>
+                        <label>
+                            <p>Nombre *</p>
+                            <input type="text" name="NombreC" id="Nom_client" placeholder="Nombre" />
+                            <input type="text" name="ApellidoC" id="Ape_client" placeholder="Apellidos" />
+                        </label>
+                        <label>
+                            <p>Fecha de nacimiento *</p>
+                            <input type="date" name="FechaC" id="Fecha_client" />
+                        </label>
+                        <label>
+                            <p>Sexo *</p>
+                            <input type="text" name="SexoC" id="Sexo_client" placeholder="Sexo" />
+                        </label>
+                    </section>
+                    <section id="Seccion2">
+                        <h3>¿Cómo quieres iniciar sesión?</h3>
+                        <label>
+                            <p>Nombre de cuenta Asesorcorp *</p>
+                            <input type="text" name="CuentaC" id="Cuenta_client" placeholder="Ejemplo: juanita33" />
+                            <select name="Diferente_correos" id="correos">
+                                <option value="primera">@asesorcorp.es</option>
+                                <option value="segunda">@asesorcorp.com</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Crea una contraseña *</p>
+                            <input type="password" name="Contra1C" id="Contra_client" />
+                        </label>
+                        <label>
+                            <p>Vuelve a escribir la contraseña *</p>
+                            <input type="password" name="Contra2C" id="Contra_client_rep" />
+                        </label>
+                    </section>
+                    <section id="Seccion3">
+                        <a href="#" id="btn_CrearCuenta" onclick="CrearCuentaC();">Crear cuenta</a>
+                        <p>
+                            ¿Ya tienes una cuenta de Asesorcorp? 
+                            <a href="#" id="IniciarSesC" onclick="AbrirCliente();">Iniciar Sesión ahora</a>
+                        </p>
+                    </section>
+                </div>
+            </form>
+        </div>
+        <!--Para el registro del Abogado-->
+        <div id="registro">
+            <form id="TodoRegistroA">
+                <div id="contendorRegistro_Abogado">
+                    <div class="titulo_registro">
+                        <h1>Cuenta Asesorcorp-Abogado</h1>
+                    </div>
+                    <section id="Seccion1">
+                        <h3>¿Quién eres?</h3>
+                        <label>
+                            <p>Nombre *</p>
+                            <input type="text" name="NombreA" id="Nom_Abog" placeholder="Nombre" />
+                            <input type="text" name="ApellidoA" id="Ape_Abog" placeholder="Apellidos" />
+                        </label>
+                        <label>
+                            <p>Fecha de nacimiento *</p>
+                            <input type="date" name="FechaA" id="Fecha_Abog" />
+                        </label>
+                        <label>
+                            <p>Sexo *</p>
+                            <input type="text" name="SexoA" id="Sexo_Abog" placeholder="Sexo" />
+                        </label>
+                    </section>
+                    <section id="Seccion2">
+                        <h3>¿Cómo quieres iniciar sesión?</h3>
+                        <label>
+                            <p>Nombre de cuenta Asesorcorp *</p>
+                            <input type="text" name="CuentaA" id="Cuenta_Abog" placeholder="Ejemplo: juanita33" />
+                            <select name="Diferente_correosA" id="correosA">
+                                <option value="primeraA">@asesorcorp.es</option>
+                                <option value="segundaA">@asesorcorp.com</option>
+                            </select>
+                        </label>
+                        <label>
+                            <p>Crea una contraseña *</p>
+                            <input type="password" name="Contra1A" id="Contra_Abog" />
+                        </label>
+                        <label>
+                            <p>Vuelve a escribir la contraseña *</p>
+                            <input type="password" name="Contra2A" id="Contra_Abog_rep" />
+                        </label>
+                    </section>
+                    <section id="Seccion3">
+                        <a href="#" id="btn_CrearCuenta" onclick="CrearCuentaA();">Crear cuenta</a>
+                        <p>
+                            ¿Ya tienes una cuenta de Asesorcorp? 
+                            <a href="#" id="IniciarSesA" onclick="AbrirAbogado();">Iniciar Sesión ahora</a>
+                        </p>
+                    </section>
+                </div>
+            </form>
+        </div>
+
+        <!--Parte teorica-->
+        <main>
+            <section class="presentation container" id="asesorcorp">
+
+                <img src="Recursos/asesorcorp.png" alt="" class="presentation__picture">
+
+                <h2 class="subtitle">ASESORCORP</h2>
+
+                <p class="presentation__copy">Principalmente lo que se pretende es dar un servicio de asesoría jurídica en línea
+                    para las personas que lo necesiten, así poder esclarecer o solucionar sus problemas legales. 
+                    Damos una nueva fuente de trabajo para los abogados que deseen registrarse en nuestra página. </br></br>
+
+                    Aprovechando la evolución de la tecnología y que las actividades se están digitalizando podemos 
+                    ingresar en nuestro país una nueva herramienta, en la cual los beneficiados seran las persona 
+                    que necesite un abogado o asesoría de urgencia en cualquier parte de nuestro país, los abogados 
+                    que deseen utilizar nuestra plataforma solo deberán hacer un pago mensual.
+                    </p>
+
+                <a href="contactanos.html" class="presentation__cta">Contacta con nosotros</a>
+
+            </section>
+            <section class="about container" id="nosotros">
+
+                <div class="about__texts" id="mision">
+
+                    <h2 class="subtitle">MISION</h2>
+
+                    <p class="about__paragraph">Somos una plataforma online, la cual proporciona asesorías 
+                        jurídicas para cualquier caso relacionado a temas legales, contando con un amplio
+                        y selecto grupo de abogados asociados, teniendo diferentes metodologías de consultas
+                        y respuestas inmediatas.</p>
+                </div>
+
+                <figure class="about__img">
+                    <img src="Recursos/abogado3.jpg" alt="" class="about__picture">
+                </figure>
+                <figure class="about__img about__img--left">
+                    <img src="Recursos/ley2.jpg" alt="" class="about__picture">
+                </figure>
+
+                <div class="about__texts" id="vision">
+
+                    <h2 class="subtitle">Vision</h2>
+
+                    <p class="about__paragraph">Ser la plataforma líder de asesoría 
+                        legal online a nivel nacional e internacional, ofreciendo el 
+                        mejor servicio de asesoría en manos de los mejores profesionales
+                        en la materia del Derecho.</p>
+
+
+                </div>
+            </section>
+
+            <section class="abogados" id="nuestro_equipo">
+                <div class="container">
+                    <h2 class="subtitle subtitle--m">Nuestros Abogados</h2>
+                        <div class="abogados__grid">
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado2.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Mike Ross
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado1.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Rachel Zane
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado4.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Louis Litt
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado5.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Katrina Bennett
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado6.jpg" alt="" class="abogado__img abogado__img--top" >
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Harvey Specter
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                        </div>
+                </div>
+            </section>
+
+            <section class="testimonio container" id="comentarios">
+                <h2 class="subtitle subtitle--m">
+                    ¿Que dicen de nosotros?
+                </h2>
+
+                <div class="testimonio__grid">
+                    <article class="testimonio__item">
+                        <div class="testimonio__persona">
+                            <img src="Recursos/persona1.jpg" alt="" class="testimonio__img">
+                            <div class=" testimonio__text">
+                            <h3 class="testimonio__nombre">Johana Nicole</h3>
+                            <p class="testimonio__verificacion">Clienta satisfecha</p>
+                        </div>
+                </div>
+
+                <p class="testimonio_reseña">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor consectetur
+                    optio, sed quae veritatis autem ea facere accusamus aliquam suscipit.</p>
+                </article>
+
+                <article class="testimonio__item">
+                    <div class="testimonio__persona">
+                        <img src="Recursos/persona2.jpg" alt="" class="testimonio__img">
+                            <div class=" testimonio__text">
+                        <h3 class="testimonio__nombre">Antonio Gonzalez</h3>
+                        <p class="testimonio__verificacion">Cliente satisfecho</p>
+                    </div>
+                    </div>
+
+                    <p class="testimonio_reseña">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor consectetur
+                        optio, sed quae veritatis autem ea facere accusamus aliquam suscipit.</p>
+                </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__grid">
+                <nav class="nav--footer">
+                    <a class="nav__items nav__items--footer" href="#">Inicio</a>
+                    <a class="nav__items nav__items--footer" href="#nosotros">Nosotros</a>
+                    <a class="nav__items nav__items--footer" href="">Preguntas Frecuentes</a>
+                </nav>
+
+                <section class="footer__contact">
+                    <h3 class="footer__title">Contactanos</h3>
+                    <div class="footer__icons">
+                        <span class="footer__container-icons">
+                            <a class="fab fa-facebook-f footer__icon" title="FACEBOOK" href="#"></a>
+                        </span>
+
+                        <span class="footer__container-icons">
+                            <a class="fab fa-twitter footer__icon" title="TWITTER" href="https://www.twitter.com/AssesorC"></a>
+                        </span>
+
+                        <span class="footer__container-icons">
+                            <a class="fab fa-whatsapp footer__icon" title="WHATSAPP" href="#"></a>
+                        </span>
+
+
+                    </div>
+                </section>
+            </div>
+        </footer>
+
+        <!--Todos los Script-->
+        <script src="https://kit.fontawesome.com/bac9c3505c.js" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+        
+        <df-messenger
+            intent="WELCOME"
+            chat-title="ANDRU"
+            chat-icon="iconos/chatbot.png"
+            agent-id="3dfcc46a-ec92-4658-bb0c-83c835535632"
+            language-code="es"
+        ></df-messenger>
+
+        <!--Script del index-->
+        <script src="js/index.js"></script>
+
+        <!--Script del formulario de registro-->
+        <script src="js/Formulario-Registro.js"></script>
+
+        <!--Script de la validacion del login-->
+        <script src="js/Logins.js"></script>
+
+    </body>
+
+</html>

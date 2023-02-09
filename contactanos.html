@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contactanos</title>
+        <link rel="stylesheet" href="css/Contactanos.css">
+        <link rel="stylesheet" href="css/Logins.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/RegistroSesion.css">
+    </head>
+    <body>
+        <header class="hero headerCont" id="headerCont">
+            <div class="container">
+                <div class="menu">
+                    <nav>
+                        <ul class="lista">
+                            <li>
+                                <a href="index.html" onclick="visible1();">Inicio</a>
+                            </li>
+                            <li>
+                                <a href="#">Iniciar Sesion</a>
+                                <div class="sesiones">
+                                    <a href="#" id="btnLogC" onclick="AbrirCliente();">Cliente</a>
+                                    <a href="#" id="btnLogA" onclick="AbrirAbogado();">Abogado</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#asesorcorp" onclick="visible1();">Acesorcorp</a>
+                            </li>
+                            <li id="contac">
+                                <a href="#" onclick="location.reload();">Contactanos</a>
+                            </li>
+                            <li>
+                                <a href="#mision" onclick="visible2();">Nosotros</a>
+                            </li>
+                            <li>
+                                <a href="#nuestro_equipo" onclick="visible3();">Nuestro Equipo</a>
+                            </li>
+                            <li>
+                                <a href="#comentarios" onclick="visible4();">Reseñas</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <section class="hero__container">
+                    <div class="hero__texts">
+                        <h1 class="hero__title">
+                            Contactanos
+                        </h1>
+                        <div class="centrar--sub">
+                            <h2 class="hero__subtitle">Notifcanos de algun error u opinión</h2>
+                        </div>
+                        <div class="centrar--b">
+                            <a href="#contenedor_contacto" class="hero__cta" onclick="visible_contacto();">Escribe ahora</a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <div class="hero__wave" style="overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                    style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 351.74,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
+        </header>
+
+        <!--Para contactarnos-->
+        <div id="contenedor_contacto">
+            <form action="mailto:hg2779948@gmail.com" method="POST" enctype="text/plain" class="contendor_secundario" id="FORMULARIO">
+                <div class="correo">
+                    <section id="contiene_input">
+                        <label class="alto_original">
+                            <h3>Nombre *</h3>
+                            <input type="text" name="name" id="contact_name" placeholder="Ingrese su nombre" />
+                        </label>
+                        <label class="alto_original">
+                            <h3>Email *</h3>
+                            <input type="email" name="mail" id="contact_email" placeholder="Ingrese su correo electrónico" />
+                        </label>
+                        <label class="alto_original">
+                            <h3>Compañía/Organización</h3>
+                            <input type="text" name="organization" id="contact_organization" placeholder="Ingrese su Compañía u Organización" />
+                        </label>
+                        <label class="alto_mensaje">
+                            <h3>Mensaje *</h3>
+                                <textarea name="message" id="texta" cols="30" rows="10" ></textarea>
+                        </label>
+                    </section>
+                    <section id="contiene_contacto">
+                        <div class="iconos_redes">
+                            <a href="#"><img src="iconos/instagram.png" title="INSTAGRAM" /></a>
+                            <a href="https://www.twitter.com/AssesorC"><img src="iconos/twitter.png" title="TWITTER" /></a>
+                            <a href="#"><img src="iconos/facebook.png" title="FACEBOOK" /></a>
+                        </div>
+                        <div class="contiene_tecnico">
+                            <h2>Técnicos</h2>
+                            <a href="www.gmail.com" title="Ing. Hector Garcia">
+                                <h4>hgarciag15@miumg.edu.gt</h4>
+                            </a>
+                            <h4 class="correo_tec">+502 47980664</h4>
+                            <a href="www.gmail.com" title="Ing. Damian Veliz">
+                                <h4>jvelizh1@miumg.edu.gt</h4>
+                            </a>
+                            <h4 class="correo_tec">+502 54873972</h4>
+                            <a href="www.gmail.com" title="Ing. Fernando Amado">
+                                <h4>fescobarp1@miumg.edu.gt</h4>
+                            </a>
+                            <h4 class="correo_tec">+502 47487661</h4>
+                            <a href="www.gmail.com" title="Ing. Josue Garcia">
+                                <h4>lgarciav14@miumg.edu.gt</h4>
+                            </a>
+                            <h4 class="correo_tec">+502 30571670</h4>
+                            <a href="www.gmail.com" title="Ing. Orlando Mejia">
+                                <h4>omejiap@miumg.edu.gt</h4>
+                            </a>
+                            <h4 class="correo_tec">+502 59626761</h4>
+                            <a href="www.gmail.com" title="Ing. Carlos Vela">
+                                <h4>cvelal@miumg.edu.gt</h4>
+                            </a>
+                            <h4 class="correo_tec">+502 41029239</h4>
+                        </div>
+                    </section>
+                </div>
+                <button type="submit" class="btn-enviar" onclick="invisible_contacto();">Enviar</button>
+            </form>
+        </div>
+
+        <!--Para los login-->
+        <!--Login cliente-->
+        <div id="ventanaLoginC">
+            <div id="cerrarLogin">
+                <a href="#" id="CerrarLoginC" onclick="cerrarVentanaC();">
+                    <img src="iconos/cerrar.png" title="Cerrar" />
+                </a>
+            </div>
+            <h1>LOGIN CLIENTE</h1>
+            <form id="LogClient">
+                <div class="contenedor_login" id="contenedor_loginC">
+                    <input type="text" id="UsuarioCliente" placeholder="Ingrese su Usuario" />
+                    <input type="password" id="ContraCliente" placeholder="Ingrese su Contraseña" />
+                    <a href="#" class="BtnIngresar" id="IngresarC" onclick="IngresarCliente();">Ingresar</a>
+                    <a href="#" class="BtnOlvido" id="OlvidoC">¿Olvidó su contraseña?</a>
+                    <a href="#" class="BtnRegistrar" id="RegistrarC" onclick="AbrirRegCliente();">REGISTRARSE</a>
+                </div> 
+            </form>
+        </div>
+
+        <!--Login abogado-->
+        <div id="ventanaLoginA">
+            <div id="cerrarLogin">
+                <a href="#" id="CerrarLoginA" onclick="cerrarVentanaA();">
+                    <img src="iconos/cerrar.png" title="Cerrar" />
+                </a>
+            </div>
+            <h1>LOGIN ABOGADO</h1>
+            <form id="LogAbog">
+                <div class="contenedor_login" id="contenedor_loginA">
+                    <input type="text" id="UsuarioAbogado" placeholder="Ingrese su Usuario" />
+                    <input type="password" id="ContraAbogado" placeholder="Ingrese su Contraseña" />
+                    <a href="#" class="BtnIngresar" id="IngresarA" onclick="IngresarAbogado();">Ingresar</a>
+                    <a href="#" class="BtnOlvido" id="OlvidoA">¿Olvidó su contraseña?</a>
+                    <a href="#" class="BtnRegistrar" id="RegistrarA" onclick="AbrirRegAbogado();">REGISTRARSE</a>
+                </div>
+            </form>
+        </div>
+
+        <main>
+            <div id="other1">
+                <section class="presentation container" id="asesorcorp">
+
+                    <img src="Recursos/asesorcorp.png" alt="" class="presentation__picture">
+
+                    <h2 class="subtitle">ASESORCORP</h2>
+
+                    <p class="presentation__copy">Principalmente lo que se pretende es dar un servicio de asesoría jurídica
+                        en línea
+                        para las personas que lo necesiten y así poder esclarecer o solucionar sus problemas legales.
+                        Damos una nueva fuente de trabajo para los abogados que deseen registrarse en nuestra página.
+                        </br></br>
+
+                        Aprovechando la evolución de la tecnología y que las actividades se están digitalizando podemos
+                        ingresar en nuestro país una nueva herramienta en la cual los beneficiados será cualquier persona
+                        que necesite un abogado o asesoría de urgencia en cualquier parte de nuestro país, los abogados
+                        que deseen utilizar nuestra plataforma solo deberán hacer un pago mensual por su suscripción.
+                    </p>
+
+                    <a href="#" class="presentation__cta" onclick="invisible1();">Contacta con nosotros</a>
+                    <a href="#" class="presentation__cta" onclick="invisible1();">Subir</a>
+                    <div class="espacio"></div>
+                </section>
+            </div>
+            <div id="other2">
+                <section class="about container" id="nosotros">
+
+                    <div class="about__texts" id="mision">
+
+                        <h2 class="subtitle">MISION</h2>
+
+                        <p class="about__paragraph">Somos una plataforma online, la cual proporciona asesorías
+                            jurídicas para cualquier caso relacionado a temas legales, contando con un amplio
+                            y selecto grupo de abogados asociados, teniendo diferentes metodologías de consultas
+                            y respuestas inmediatas.</p>
+
+                        <a href="#" class="presentation__cta" onclick="invisible2();">Subir</a>
+                    </div>
+
+                    <figure class="about__img">
+                        <img src="Recursos/abogado3.jpg" alt="" class="about__picture">
+                    </figure>
+                    <figure class="about__img about__img--left">
+                        <img src="Recursos/ley2.jpg" alt="" class="about__picture">
+                    </figure>
+
+                    <div class="about__texts" id="vision">
+
+                        <h2 class="subtitle">Vision</h2>
+
+                        <p class="about__paragraph">Ser la plataforma líder de asesoría
+                            legal online a nivel nacional e internacional, ofreciendo el
+                            mejor servicio de asesoría en manos de los mejores profesionales
+                            en la materia del Derecho.</p>
+
+                        <a href="#" class="presentation__cta" onclick="invisible2();">Subir</a>
+                    </div>
+                </section>
+            </div>
+            <div id="other3">
+                <section class="abogados" id="nuestro_equipo">
+                    <div class="container">
+                        <h2 class="subtitle">Nuestros Abogados</h2>
+                        <div class="abogados__grid">
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado2.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Tu abogado
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado1.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Tu abogado
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado4.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Tu abogado
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado5.jpg" alt="" class="abogado__img">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Tu abogado
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                            <article class="abogados__item">
+                                <img src="Recursos/abogado6.jpg" alt="" class="abogado__img abogado__img--top">
+                                <div class="abogado__hover">
+                                    <h2 class="abogado__title">Tu abogado
+                                    </h2>
+                                    <i class="far fa-file-alt abogados__icon"> </i>
+                                </div>
+                            </article>
+
+                        </div>
+                        <a href="#" class="presentation__cta" onclick="invisible3();" style="margin-left: 545px;">Subir</a>
+                    </div>
+                </section>
+            </div>
+            <div id="other4">
+                <section class="testimonio container" id="comentarios">
+                    <h2 class="subtitle">
+                        ¿Que dicen de nosotros?
+                    </h2>
+
+                    <div class="testimonio__grid">
+                        <article class="testimonio__item">
+                            <div class="testimonio__persona">
+                                <img src="Recursos/persona1.jpg" alt="" class="testimonio__img">
+                                <div class=" testimonio__text">
+                                    <h3 class="testimonio__nombre">Johana Nicole</h3>
+                                    <p class="testimonio__verificacion">Clienta satisfecha</p>
+                                </div>
+                            </div>
+
+                            <p class="testimonio_reseña">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+                                consectetur
+                                optio, sed quae veritatis autem ea facere accusamus aliquam suscipit.</p>
+                        </article>
+
+                        <article class="testimonio__item">
+                            <div class="testimonio__persona">
+                                <img src="Recursos/persona2.jpg" alt="" class="testimonio__img">
+                                <div class=" testimonio__text">
+                                    <h3 class="testimonio__nombre">Antonio Gonzalez</h3>
+                                    <p class="testimonio__verificacion">Cliente satisfecho</p>
+                                </div>
+                            </div>
+
+                            <p class="testimonio_reseña">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
+                                consectetur
+                                optio, sed quae veritatis autem ea facere accusamus aliquam suscipit.</p>
+                        </article>
+                        <a href="#" class="presentation__cta" onclick="invisible4();" style="margin-left: 545px;">Subir</a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!--Todos los Script-->
+        <script src="https://kit.fontawesome.com/bac9c3505c.js" crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+        <df-messenger 
+            intent="WELCOME" 
+            chat-title="ANDRU" 
+            chat-icon="iconos/chatbot.png"
+            agent-id="3dfcc46a-ec92-4658-bb0c-83c835535632" 
+            language-code="es">
+        </df-messenger>
+          
+        <!--Script del formulario de registro-->
+        <script src="js/Formulario-Registro.js"></script>
+
+        <!--Script de contactanos-->
+        <script src="js/Contactanos.js"></script>
+
+        <!--Script de la validacion del login-->
+        <script src="js/Logins.js"></script>
+    </body>
+</html>
